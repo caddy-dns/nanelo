@@ -1,23 +1,12 @@
-**DEVELOPER INSTRUCTIONS:**
-
-- Update module name in go.mod
-- Update dependencies to latest versions
-- Update name and year in license
-- Customize configuration and Caddyfile parsing
-- Update godocs / comments (especially provider name and nuances)
-- Update README and remove this section
-
----
-
-\<PROVIDER\> module for Caddy
+Nanelo module for Caddy
 ===========================
 
-This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with \<PROVIDER\>.
+This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with [Nanelo](https://nanelo.com/).
 
-## Caddy module name
+## nanelo
 
 ```
-dns.providers.provider_name
+dns.providers.nanelo
 ```
 
 ## Config examples
@@ -30,8 +19,8 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 	"challenges": {
 		"dns": {
 			"provider": {
-				"name": "provider_name",
-				"api_token": "YOUR_PROVIDER_API_TOKEN"
+				"name": "name",
+				"api_token": "YOUR_NANELO_API_TOKEN"
 			}
 		}
 	}
@@ -43,13 +32,13 @@ or with the Caddyfile:
 ```
 # globally
 {
-	acme_dns provider_name ...
+	acme_dns nanelo ...
 }
 ```
 
 ```
 # one site
 tls {
-	dns provider_name ...
+	dns nanelo ...
 }
 ```
