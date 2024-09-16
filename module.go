@@ -1,8 +1,6 @@
 package nanelo
 
 import (
-	"fmt"
-
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	nanelo "github.com/libdns/nanelo"
